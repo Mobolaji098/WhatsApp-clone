@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
 import { Chat, LoadingIndicator, Streami18n } from "stream-chat-react";
-import { useTheme } from "../themeProvider";
+import { useTheme } from "../ThemeProvider";
 import { registerServiceWorker } from "../utils/serviceWorker";
 import { mdBreakPoint } from "../utils/tailwind";
 import ChatChannel from "./ChatChannel";

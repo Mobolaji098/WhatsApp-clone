@@ -9,7 +9,7 @@ import { dark } from "@clerk/themes";
 import { BellOff, BellRing, Moon, Sun, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 import { LoadingIndicator } from "stream-chat-react";
-import { useTheme } from "../themeProvider";
+import { useTheme } from "../ThemeProvider";
 
 interface MenuBarProps {
   onUserMenuClick: () => void;
