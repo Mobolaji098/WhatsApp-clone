@@ -1,0 +1,30 @@
+import { ReactNode, useEffect, useState } from "react";
+
+interface DisappearingMessageProps {
+  children: ReactNode;
+  duration?: Number;
+  className?: string;
+}
+export default function DisappearingMessage({
+  children,
+  duration = 5000,
+  className,
+}: DisappearingMessageProps) {
+    
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setVisible(false), 5000);
+    return () => clearTimeout(timeout);
+  }, [duration]);
+
+  return (
+    <div
+      className={`${
+        visible ? "opacity-100" : "opacity-0 "
+      } w-max transition-opacity duration-500 ${className} `}
+    >
+      {children}
+    </div>
+  );
+}
