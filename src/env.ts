@@ -5,6 +5,7 @@ export const env = createEnv({
   server: {
     STREAM_SECRET: z.string().min(1),
     CLERK_SECRET_KEY: z.string().min(1),
+    CLERK_WEBHOOK_SECRET: z.string().min(1),
     WEB_PUSH_PRIVATE_KEY:z.string().min(1),
   },
   client: {
@@ -17,6 +18,7 @@ export const env = createEnv({
     NEXT_PUBLIC_STREAM_KEY: process.env.NEXT_PUBLIC_STREAM_KEY,
     STREAM_SECRET:process.env.STREAM_SECRET,
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
+    CLERK_WEBHOOK_SECRET:process.env.CLERK_WEBHOOK_SECRET,
     NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY:process.env.NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY,
     WEB_PUSH_PRIVATE_KEY:process.env.WEB_PUSH_PRIVATE_KEY
 
