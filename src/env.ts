@@ -1,4 +1,4 @@
-import {createEnv} from "@t3-oss/env-nextjs"
+import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
 export const env = createEnv({
@@ -6,21 +6,18 @@ export const env = createEnv({
     STREAM_SECRET: z.string().min(1),
     CLERK_SECRET_KEY: z.string().min(1),
     CLERK_WEBHOOK_SECRET: z.string().min(1),
-    WEB_PUSH_PRIVATE_KEY:z.string().min(1),
+    WEB_PUSH_PRIVATE_KEY: z.string().min(1),
   },
   client: {
-    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string().min(1),
     NEXT_PUBLIC_STREAM_KEY: z.string().min(1),
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: z.string().min(1),
     NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY: z.string().min(1),
   },
   experimental__runtimeEnv: {
-    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
     NEXT_PUBLIC_STREAM_KEY: process.env.NEXT_PUBLIC_STREAM_KEY,
-    STREAM_SECRET:process.env.STREAM_SECRET,
-    CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
-    CLERK_WEBHOOK_SECRET:process.env.CLERK_WEBHOOK_SECRET,
-    NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY:process.env.NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY,
-    WEB_PUSH_PRIVATE_KEY:process.env.WEB_PUSH_PRIVATE_KEY
-
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:
+      process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+    NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY:
+      process.env.NEXT_PUBLIC_WEB_PUSH_PUBLIC_KEY,
   },
 });
